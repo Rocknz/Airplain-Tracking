@@ -49,35 +49,57 @@ def main():
     # WebDriverWait(driver, 40)
 
     path = {
-        "BER-AMS": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNBTVNyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
-        "BER-BER": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCRVJyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
-        "BER-BRU": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCUlVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
-        "BER-WAW": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNXQVdyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko"
+        # "15-BER-AMS": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNBTVNyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "15-BER-BER": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCRVJyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "15-BER-BRU": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCUlVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "15-BER-WAW": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNXQVdyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "15-BER-VIE": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNWSUVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "16-BER-AMS": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNBTVNyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "16-BER-BER": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCRVJyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "16-BER-BRU": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCUlVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "16-BER-WAW": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNXQVdyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        # "16-BER-VIE": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNWSUVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko"
+        "15-BER-AMS": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNBTVNyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        "15-BER-BRU": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCUlVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        "16-BER-AMS": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNBTVNyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        "16-BER-BRU": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQkVSGh4SCjIwMjQtMDMtMDJqBwgBEgNCUlVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        "15-AMS-BER": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQU1TGh4SCjIwMjQtMDMtMDJqBwgBEgNCRVJyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        "15-BRU-BER": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE1YLAJagcIARIDSUNOcgcIARIDQlJVGh4SCjIwMjQtMDMtMDJqBwgBEgNCRVJyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        "16-AMS-BER": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQU1TGh4SCjIwMjQtMDMtMDJqBwgBEgNCRVJyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko",
+        "16-BRU-BER": "https://www.google.com/travel/flights/search?tfs=CBwQAhohEgoyMDI0LTAyLTE2YLAJagcIARIDSUNOcgcIARIDQlJVGh4SCjIwMjQtMDMtMDJqBwgBEgNCUlVyBwgBEgNJQ05AAUgBcAGCAQsI____________AZgBAw&tfu=EgIIASIDCgEw&hl=ko"
     }
-    min_value = {}
+    last_value = {}
     for key in path:
-        min_value[key] = 1e100
+        last_value[key] = 1e100
 
     updated = False
     slack_noti = Noti()
     while True:
         try:
             message = ''
+            diff = False
             for key in path:
                 login_url = path[key]
                 driver.get(login_url)
-                time.sleep(3)
+                time.sleep(5)
                 driver.implicitly_wait(40)
                 # parse_list(driver)
                 costs = parse_costs(driver)
                 message += key + ": "
                 for cost in costs[:2]:
                     message += cost[1:][:-5] + "\t"
+
+                if last_value[key] != costs[0][1:][:-5]:
+                    diff = True
+                last_value[key] = costs[0][1:][:-5]
+
                 message += "\n"
 
-            slack_noti.send(message)
+            if diff == True:
+                slack_noti.send(message)
             time.sleep(3*60*60)
         except:
+            print("Error!")
             time.sleep(3)
 
 
